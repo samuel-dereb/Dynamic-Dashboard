@@ -58,6 +58,14 @@ const styles = StyleSheet.create({
         color: "#DD2C00",
         fontWeight: "bold",
         marginLeft: 5
+    },
+    sevenDaysPriceChange: {
+        textAlign: "right",
+        marginLeft: "auto",
+        marginRight: 0,
+    },
+    twentyFourHourPriceChange: {
+        marginLeft: 45
     }
 })
 
@@ -72,7 +80,9 @@ const {
     statisticsContainer,
     seperator,
     percentChangePlus,
-    percentChangeMinus
+    percentChangeMinus,
+    sevenDaysPriceChange,
+    twentyFourHourPriceChange
 } = styles;
 
 export const CoinCard = ({symbol, coin_name, price_usd, percent_change_24h, percent_change_7d}) => (
@@ -85,15 +95,16 @@ export const CoinCard = ({symbol, coin_name, price_usd, percent_change_24h, perc
             <Text style={coinSymbol}>{coin_name.toUpperCase()}</Text>
             <Text style={seperator}>|</Text>
             <Text style={coinName}>{coin_name}</Text>
-            <Text style={coinPrice}>{price_usd}
+            <Text style={coinPrice}>
                 <Text style={moneySymbol}> $ </Text>
+                {Number(price_usd).toFixed(2)}
             </Text>
         </View>
         <View style={statisticsContainer}>
-            <Text>24h:
+            <Text style={twentyFourHourPriceChange}>24h:
                 <Text style={percent_change_24h < 0 ? percentChangeMinus : percentChangePlus }> {percent_change_24h} % </Text>
             </Text>
-            <Text>7d:
+            <Text style={sevenDaysPriceChange}>7d:
                 <Text style={percent_change_7d < 0 ? percentChangeMinus : percentChangePlus }> {percent_change_7d} % </Text>
             </Text>
         </View>
