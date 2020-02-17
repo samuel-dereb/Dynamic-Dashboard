@@ -1,4 +1,4 @@
-# cryptoNative
+# Dynamic Dashboard Mobile Application
 Dynamic Dashboard
 
 Before running the application, make sure your environment is setup for react-native. [Click here to setup](https://facebook.github.io/react-native/docs/getting-started)
