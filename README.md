@@ -14,3 +14,5 @@ Before running the application, make sure your environment is setup for react-na
 1. Open file directory on termianl/cmd and run the following
 2. ```npm i```
 3. ```npm run android```
+
+![dynamic dashboard](http://www.samueldereb.com/img/dynamic-dashboard.gif)
